@@ -36,6 +36,29 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
+// Task 1: Generate Attendee Badge
+/*
+Built a function generateBade that
+takes a name (Alice and Bob) and role and
+returns a formatted badge string with the role capitalized.
+We used three methods charAt(0).toUpperCase()and slice(1);
+*/
+
+
+
+function generateBadge(name, role)
+{
+let formattedRole =
+role.charAt(0).toUpperCase() + role.slice(1);
+return `Name: ${name}, Role: ${formattedRole}`;
+}
+
+
+
+console.log(generateBadge("Alice", "Software Engineer"));
+console.log(generateBadge("Ben", "Systems Engineer"));
+console.log(generateBadge("John", "Data Scientist"));
+
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -51,6 +74,20 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. If so, apply a 10% discount.
 // 4. Return the final total.
 
+function calculateEventCost(attendees,costPerAttendee
+)
+{
+    let total = attendees * costPerAttendee;
+    if (attendees > 100) {
+total = total * 0.90;
+    }
+    return total;
+}
+
+console.log(calculateEventCost(100, 50));
+console.log(calculateEventCost(200, 350));
+console.log(calculateEventCost(75, 40));
+
 
 // ============================================
 // 🧩 Task 3: Validate Email
@@ -64,28 +101,14 @@ reusable functions that solve specific tasks. This activity encourages:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
 
+// Task 3: Validate Email
 
-// ============================================
-// 🧠 Collaborative Steps
-// ============================================
+function validateEmail(email) {
+  return email.includes("@") && email.includes(".");
+}
 
-// 📌 Design Phase:
-// - Brainstorm function requirements: What inputs and outputs are needed?
-// - Assign roles within your team:
-//   ▸ Pseudocode Writer
-//   ▸ Initial Coder
-//   ▸ Testers / Debuggers
+console.log(validateEmail("sugi@gmail.com"));
+console.log(validateEmail("chrisgmail.com"));
+console.log(validateEmail("sherie@gmailcom"));
 
-// 🛠️ Implementation Phase:
-// - Write and refine your three functions as a team
-// - Use return statements and ensure reusability
-
-// 🧪 Testing Phase:
-// - Each member writes test cases for each function
-// - Use console.log() to test different inputs and edge cases
-
-// 🎤 Presentation Phase:
-// - Share your functions with the class
-// - Explain how your team approached the design and testing process
-
-// ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+ 
