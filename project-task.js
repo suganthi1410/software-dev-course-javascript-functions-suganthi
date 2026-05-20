@@ -31,7 +31,7 @@ This activity reinforces:
 // ============================================
 // ❌ Original Code (Before Refactoring)
 // ============================================
-
+/*
 // Script 1 - Greeting multiple users
 console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
@@ -53,7 +53,7 @@ for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
 
-/*
+
 ===========================================
 🛠️ Steps for Refactoring
 ===========================================
@@ -71,4 +71,57 @@ for (let i = 0; i < names.length; i++) {
    - Keep your code clean, readable, and easy to maintain
 */
 
-// ✅ Your refactored code goes below this line!
+// Refactored Code (After Refactoring)
+//Task 1: Greeting multiple users
+
+function greetUser(name) {
+    console.log(`Welcome, ${name}!`);
+}        
+greetUser("Alice");
+greetUser("Bob");
+greetUser("Charlie");
+
+// Task 2: Sum calculation
+function calculateSum(a, b) {
+    let sum = a + b;
+    console.log("The sum of " + a + " and " + b + " is " + sum);
+    return sum;   
+}       
+calculateSum(5, 10);
+let num1 = 15, num2 = 20 ,num3 = 25; num4 = 30;
+calculateSum(99, 256);
+calculateSum(num1, num2);
+console.log(calculateSum(num3, num4));
+console.log(calculateSum(100, 200));
+
+// Task 3: Product calculation
+function calculateProduct(a, b) {
+    let product = a * b;   
+      console.log("The product of " + a + " and " + b + " is " + product);
+      return product;
+} 
+calculateProduct(5, 10);
+calculateProduct(15, 20);
+calculateProduct(num3, num4);
+calculateProduct(100, 200);
+
+// Task 4: Print names from a list
+let names = ["Alice", "Bob", "Charlie"];
+function printNames(names) {
+      console.log("Names in the list:");
+      for (let i = 0; i < names.length; i++) {
+            console.log(names[i]);
+      }
+}
+let moreNames = ["Allen", "Ben", "John"];
+printNames(names); 
+printNames(moreNames);
+function greetAllUsers(names, moreNames) {
+   for (let name of names) {
+      greetUser(name);
+   }
+   for (let name of moreNames) {
+      greetUser(name);
+   }
+}  
+greetAllUsers(names, moreNames);
